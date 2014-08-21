@@ -2,6 +2,7 @@
 #include "class_tests.h"
 #include "obj_tests.h"
 #include "interop_tests.h"
+#include "metatable_tests.h"
 #include "reference_tests.h"
 #include "selector_tests.h"
 #include <map>
@@ -31,6 +32,11 @@ static TestMap tests = {
     {"test_coroutine", test_coroutine},
     {"test_pointer_return", test_pointer_return},
     {"test_reference_return", test_reference_return},
+
+    {"test_metatable_registry_ptr", test_metatable_registry_ptr},
+    {"test_metatable_registry_ref", test_metatable_registry_ref},
+    {"test_metatable_ptr_member", test_metatable_ptr_member},
+    {"test_metatable_ref_member", test_metatable_ptr_member},
 
     {"test_register_obj", test_register_obj},
     {"test_register_obj_member_variable", test_register_obj_member_variable},
@@ -125,5 +131,5 @@ int main() {
 
     // For debugging anything in particular, you can run an individual
     //test like so:
-    //ExecuteTest("test_pointer_return");
+    //ExecuteTest("test_metatable_ptr_member");
 }
